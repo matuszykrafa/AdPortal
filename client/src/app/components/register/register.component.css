@@ -1,0 +1,11 @@
+.login-component {
+    margin-top: 40px;
+    width: 300px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

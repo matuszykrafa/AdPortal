@@ -1,0 +1,19 @@
+<div class="component-container">
+    <div class="categories-container">
+        <span class="category-item" (click)="categorySelcted(category.id)" *ngFor="let category of categories">{{category.categoryName}}</span>
+    </div>
+    <div class="custom-divider">
+        <mat-divider></mat-divider>
+    </div>
+    <div class="offers-container">
+        
+        <div class="offer-item" *ngFor="let off of offers">
+            <div class="offer-item-title" (click)="goToDetails(off)"><h2 class="mat-headline custom-headline">{{off.title}}</h2></div>
+            <div class="offer-item-description">{{off.description}}</div>
+
+        </div>
+    </div>
+    <div *ngIf="offers.length > 0" class="custom-divider">
+        <mat-divider></mat-divider>
+    </div>
+</div>

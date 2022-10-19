@@ -1,0 +1,32 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+
+.table-container {
+    width: 90%;
+    margin-top:20px
+}
+
+.component-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.custom-headline {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.custom-buttons {
+    margin: 5px;
+}

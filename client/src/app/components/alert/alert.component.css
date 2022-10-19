@@ -1,0 +1,9 @@
+.alert-container {
+    position: absolute;
+    width: 100%;
+
+}
+
+.alert-container:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,21 @@
+<div *ngIf="offer" class="component-container">
+    <div class="title-continer">
+        <h1 class="mat-headline custom-headline">
+            {{offer.title}}
+            <span *ngIf="admin" class="span-admin">{{getStatus(offer.offerStatus)}}</span>
+        </h1>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="desc-continer">
+        <p>Opis</p>
+        <p>{{offer.description}}</p>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="phone-continer">
+        <p>Contact number: {{offer.contactNumber}}</p>
+    </div>
+</div>

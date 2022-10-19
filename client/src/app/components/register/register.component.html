@@ -1,0 +1,60 @@
+<div class="login-container">
+    <div class="login-component">
+        <h2>Rejestracja</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="username">Nazwa użytkownika</label>
+                <input type="text" formControlName="username" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                    <div *ngIf="f.username.errors.required">Username is required</div>
+                    <div *ngIf="f.username.errors.minlength">Minimal length is 6</div>
+                    <div *ngIf="f.username.errors.maxlength">Minimal length is 20</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="username">Email</label>
+                <input type="email" email="true" formControlName="email" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                <div *ngIf="f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                    <div *ngIf="f.email.errors.email">Email is not correct</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Hasło</label>
+                <input type="password" formControlName="password" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                    <div *ngIf="f.password.errors.pattern">Password should be strong</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Powtórz hasło</label>
+                <input type="password" formControlName="confirmPassword" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+                <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                    <div *ngIf="f.confirmPassword.errors.required">Password confirmation is required</div>
+                    <div *ngIf="f.password.value != f.confirmPassword.value">Password are not identical</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Nr telefonu</label>
+                <input type="number" formControlName="phoneNumber" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }" />
+                <div *ngIf="submitted && f.phoneNumber.errors" class="invalid-feedback">
+                    <div *ngIf="f.phoneNumber.errors.required">Phone number is required</div>
+                    <div *ngIf="f.phoneNumber.errors.pattern">Phone number is not correct</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button [disabled]="loading" class="btn btn-primary">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Zarejestruj
+                </button>
+                <a routerLink="/login" class="btn btn-link">Zaloguj</a>
+            </div>
+        </form>
+    </div>
+</div>
