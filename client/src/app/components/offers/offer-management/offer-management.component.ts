@@ -55,7 +55,7 @@ export class OfferManagementComponent implements OnInit {
     this.offerForm = this.formBuilder.group({
       title: ['', Validators.required],
       description: ['', Validators.required],
-      price: ['', Validators.required, Validators.min(0), Validators.max(999999)],
+      price: ['', [Validators.required, Validators.min(0), Validators.max(999999)]],
       phoneNumber: ['', Validators.required],
       categoryId: ['', [Validators.required]]
     });

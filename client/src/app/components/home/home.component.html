@@ -7,8 +7,8 @@
     </div>
     <div class="offers-container">
         
-        <div class="offer-item" *ngFor="let off of offers">
-            <div class="offer-item-title" (click)="goToDetails(off)"><h2 class="mat-headline custom-headline">{{off.title}}</h2></div>
+        <div class="offer-item" *ngFor="let off of offers"  (click)="goToDetails(off)">
+            <div class="offer-item-title"><h2 class="mat-headline custom-headline">{{off.title}}</h2></div>
             <div class="offer-item-description">{{off.description}}</div>
 
         </div>
