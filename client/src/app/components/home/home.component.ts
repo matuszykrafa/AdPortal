@@ -8,7 +8,7 @@ import { OfferService } from 'src/app/services/offer.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   categories: CategoryModel[] = [];
@@ -24,6 +24,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
       if (param?.categoryId != null && param?.categoryId > 0) {
         this.categoryId = Number(param?.categoryId);
         this.selectCategory(this.categoryId)
+      } else {
+        this.selectCategory(1);
       }
     });
   }

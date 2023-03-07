@@ -14,6 +14,7 @@ namespace AdvertisementPortal.Common.Models.DatabaseModels
         public int CategoryId { get; set; }
         public virtual CategoryModel Category { get; set; }
         public int AuthorId { get; set; }
+        public int Price { get; set; }
         public virtual UserModel Author { get; set; }
         public virtual IEnumerable<ImageDataModel> Images { get; set; }
         public bool IsActive { get; set; }

@@ -3,7 +3,7 @@
         <h2 class="mat-headline custom-headline">Moje Ogłoszenia</h2>
         <mat-form-field appearance="standard">
             <mat-label>Filter</mat-label>
-            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Podaj nazwę..." #input>
         </mat-form-field>
 
         <div class="mat-elevation-z8">
@@ -34,7 +34,8 @@
                         <button class="custom-buttons" mat-raised-button color="basic" (click)="navigateToDetails(row.id)">Przegladaj</button>
                         <button class="custom-buttons" mat-raised-button color="primary" (click)="navigateToManagement(row.id)">Edytuj</button>
                         <button *ngIf="row.offerStatus != statusEnum.CANCELLED" class="custom-buttons" mat-raised-button color="warn" (click)="changeStatus(row.id, statusEnum.CANCELLED)">Anuluj</button>
-                        <button *ngIf="row.offerStatus == statusEnum.CANCELLED" class="custom-buttons" mat-raised-button color="warn" (click)="changeStatus(row.id, statusEnum.PENDING)">Ponów</button>
+                        <button *ngIf="row.offerStatus != statusEnum.PENDING" class="custom-buttons" mat-raised-button color="warn" (click)="changeStatus(row.id, statusEnum.PENDING)">Ponów</button>
+                        <button *ngIf="row.offerStatus != statusEnum.CLOSED" class="custom-buttons" mat-raised-button (click)="changeStatus(row.id, statusEnum.CLOSED)">Zamknij</button>
                     </td>
                 </ng-container>
 

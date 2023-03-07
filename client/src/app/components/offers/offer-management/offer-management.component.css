@@ -1,6 +1,6 @@
 .offer-component {
     margin-top: 40px;
-    width: 300px;
+    width: 700px;
 }
 
 .offer-container {
@@ -13,4 +13,11 @@
 .custom-invalid-feedback {
     font-size: 80%;
     color: #dc3545;
+}
+
+
+@media (max-width: 768px) {
+    .offer-component {
+        width: 80%;
+    }
 }

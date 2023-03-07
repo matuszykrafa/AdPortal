@@ -55,6 +55,7 @@ export class OfferManagementComponent implements OnInit {
     this.offerForm = this.formBuilder.group({
       title: ['', Validators.required],
       description: ['', Validators.required],
+      price: ['', Validators.required, Validators.min(0), Validators.max(999999)],
       phoneNumber: ['', Validators.required],
       categoryId: ['', [Validators.required]]
     });
@@ -98,6 +99,7 @@ export class OfferManagementComponent implements OnInit {
     this.offerForm.setValue({
       title: this.offer.title,
       description: this.offer.description,
+      price: this.offer.price,
       categoryId: this.offer.categoryId,
       phoneNumber: this.userData.phoneNumber,
     }, { emitEvent: false })
@@ -133,6 +135,7 @@ export class OfferManagementComponent implements OnInit {
       id: this.offer ? this.offer.id : 0,
       title: this.f.title.value,
       description: this.f.description.value,
+      price: this.f.price.value,
       contactNumber: this.f.phoneNumber.value,
       categoryId: this.f.categoryId.value,
       authorId: this.offer ? this.offer.authorId : 0,
