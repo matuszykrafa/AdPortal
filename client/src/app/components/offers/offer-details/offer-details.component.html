@@ -8,14 +8,33 @@
 
     <mat-divider></mat-divider>
 
-    <div class="desc-continer">
-        <p>Opis</p>
-        <p>{{offer.description}}</p>
+    <div class="offer-content-container">
+
+        <div class="offer-desc-standard-container desc-continer content-background">
+            <p class="bolder">Opis</p>
+            <hr class="heading-line offer-line line100"/>
+            <p>{{offer.description}}</p>
+        </div>
+        <div class="offer-desc-standard-container phone-continer content-background">
+            <div class="padding-0 offer-content-heading crucial-info-heading">
+                <div class="crucial-content-container">
+                    <span class="salary-text">{{offer.price}} PLN</span>
+                    <span class="smaller-text">Brutto miesięcznie</span>
+                </div>
+            </div>
+            <hr class="heading-line offer-line"/>
+
+            <div class="padding-0 offer-content-heading crucial-info-heading">
+                <div class="crucial-content-container">
+                    <span class="salary-text"> {{offer.contactNumber}}</span>
+                    <span class="smaller-text">Kontakt</span>
+                </div>
+            </div>
+            <hr class="heading-line offer-line"/>
+        </div>
     </div>
+
 
     <mat-divider></mat-divider>
 
-    <div class="phone-continer">
-        <p>Contact number: {{offer.contactNumber}}</p>
-    </div>
 </div>

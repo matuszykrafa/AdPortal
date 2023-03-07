@@ -63,4 +63,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.router.navigate([`offer-details/${off.id}`])
   }
 
+  public getDesc(desc: string): string {
+    const lengthMax = 75;
+    if (desc.length < lengthMax) return desc;
+    var res = desc.slice(0,lengthMax).trimEnd() + '...';
+    return res;
+  }
 }

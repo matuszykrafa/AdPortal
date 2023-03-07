@@ -9,7 +9,7 @@
         
         <div class="offer-item" *ngFor="let off of offers"  (click)="goToDetails(off)">
             <div class="offer-item-title"><h2 class="mat-headline custom-headline">{{off.title}}</h2></div>
-            <div class="offer-item-description">{{off.description}}</div>
+            <div class="offer-item-description">{{getDesc(off.description) }}</div>
 
         </div>
     </div>
