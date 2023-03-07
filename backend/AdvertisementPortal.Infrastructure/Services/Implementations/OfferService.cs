@@ -82,6 +82,7 @@ namespace AdvertisementPortal.Infrastructure.Services.Implementations
             updateOfferModel.Description = offerModel.Description;
             updateOfferModel.ContactNumber = offerModel.ContactNumber;
             updateOfferModel.CategoryId = offerModel.CategoryId;
+            updateOfferModel.Price = offerModel.Price;
             updateOfferModel.IsActive = offerModel.IsActive;
             updateOfferModel.OfferStatus = Common.Enums.OfferStatus.PENDING;
             _applicationDbContext.Update(updateOfferModel);
